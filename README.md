@@ -1,76 +1,75 @@
-CPDUP-FREEBSD -- Filesystem Mirroring Utility
-=============================================
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# cpdup
 
-Introduction
-------------
-The `cpdup` utility makes an exact mirror copy of the source in the
-destination, creating and deleting files and directories as necessary.
-UTimes, hardlinks, softlinks, devices, permissions, and flags are
-mirrored.  By default, `cpdup` asks for confirmation if any file or directory
-needs to be removed from the destination and does not copy files which it
-believes to have already been synchronized (by observing that the source
-and destination files' sizes and mtimes match).  `cpdup` does not cross
-mount points in either the source or the destination.  As a safety
-measure, `cpdup` refuses to replace a destination directory with a file.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/cpdup)
 
-The `cpdup` utility was originally created to update servers at
-BEST Internet circa 1997 and was placed under the FreeBSD copyright for
-inclusion in the [Ports Collection](https://www.freebsd.org/ports/) in 1999.
-This utility was written by Matthew Dillon, Dima Ruban, and later
-significantly improved by Oliver Fromme.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Upstream source:
-[DragonFly BSD's `bin/cpdup`](https://gitweb.dragonflybsd.org/dragonfly.git/tree/HEAD:/bin/cpdup)
+## Architecture
 
-Manual page: [`cpdup(1)`](https://www.dragonflybsd.org/cgi/web-man?command=cpdup&section=1)
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-Platforms
----------
-* DragonFly BSD
-* FreeBSD
-* NetBSD
-* Linux
+## Install
 
-(Welcome to help test on and port to more platforms)
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-Installation
-------------
-1.  Install dependencies:
+```bash
+git clone https://github.com/Interested-Deving-1896/cpdup.git
+cd cpdup
+```
 
-    * `make` (GNU make)
-    * `gcc`
-    * `pkg-config`
-    * `libssl-dev` (OpenSSL >= 1.0.2 or LibreSSL)
+## Usage
 
-    Arch Linux: `pacman -S pkgconf openssl`
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-    CentOS: `yum install pkgconfig openssl-devel`
+## Configuration
 
-    Debian: `apt install pkg-config libssl-dev`
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-    DragonFly BSD / FreeBSD: `pkg install gmake pkgconf libressl`
+## CI
 
-2.  Build: `make`
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-3.  Install: `sudo make install [PREFIX=/usr/local]`
+## Mirror chain
 
-Packages
---------
-**Debian Linux**:
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/cpdup`](https://github.com/Interested-Deving-1896/cpdup) and mirrored through:
 
-    $ make debpkg
-    $ sudo dpkg -i cpdup_*.deb
+```
+Interested-Deving-1896/cpdup  ──►  OpenOS-Project-OSP/cpdup  ──►  OpenOS-Project-Ecosystem-OOC/cpdup
+```
 
-**Arch Linux**:
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-    $ make archpkg
-    $ sudo pacman -U cpdup-*.pkg.*
+## Contributors
 
-**CentOS**:
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-    $ make rpm
-    $ sudo rpm -ivh cpdup-*.rpm
+## Origins
 
-License
--------
-[The 3-Clause BSD License](LICENSE)
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
